@@ -1,13 +1,12 @@
 const targetDate = document.getElementById('timer')
  
 function updateCountdown() {
-    const now = 1;
-    const remainingTime = targetDate.textContent - now;
+    const remainingTime = document.getElementById('timer').innerText = --targetDate.textContent;
     if (remainingTime === 0) {
         clearTimeout(a)
         alert("Вы победили в конкурсе!")
     }
-    document.getElementById('timer').innerText = remainingTime;
+    
 }
-a = setInterval(updateCountdown, 100);
+const a = setInterval(updateCountdown, 1000);
 
